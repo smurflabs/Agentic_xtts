@@ -1,0 +1,13 @@
+# Install PyTorch with CUDA first (pick the index for your CUDA version):
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
+# then:
+#   pip install -r requirements.txt
+# Tested with: Python 3.12, torch 2.11.0+cu128, coqui-tts 0.28.0, transformers 5.22.1, torchcodec 0.17.0
+coqui-tts[codec]>=0.28
+fastapi>=0.115
+uvicorn>=0.30
+python-multipart
+spacy  # sentence splitting for long text
+six  # missing transitive dependency of coqui-tts
+soundfile
+librosa
